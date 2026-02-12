@@ -1,2 +1,12 @@
-# git-exame-Bacar-Sill-
-Projet: Laborratorio programação
+kdir Parte1_Readme
+cd Parte1_Readme
+echo "# Projeto Git Exame
+**Nome:** Bacar Silla
+**Data:** 12/02/2026
+**Descrição do projeto:** Exercício de Git envolvendo branches, commits, merge e releases." > README.md
+
+# Commit inicial
+git add README.md
+git commit -m "docs criar README inicial"
+
+cd ..
