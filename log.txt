@@ -1,0 +1,15 @@
+git checkout -b featurelog-comandos
+
+# Criar log.txt com explicação dos comandos Git
+echo "git clone: clona um repositório remoto para a máquina local.
+git add: adiciona ficheiros ao staging para preparar para commit.
+git commit: grava alterações no repositório local com mensagem descritiva." > log.txt
+
+# Commit das alterações
+git add log.txt
+git commit -m "feat adicionar explicação de comandos"
+
+cd ..
+# Voltar para main e merge da branch
+git checkout main
+git merge featurelog-comandos

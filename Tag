@@ -1,0 +1,7 @@
+git checkout main
+git pull
+
+# Criar tag de versão
+git tag v1.0.0
+
+cd ..

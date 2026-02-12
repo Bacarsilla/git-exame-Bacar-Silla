@@ -1,0 +1,31 @@
+git checkout -b feature-edicao-readme
+
+# Alterar README na branch
+echo "# Projeto Git Exame
+**Nome:** Bacar Silla
+**Data:** 12/02/2026
+**Descrição do projeto:** Exercício completo de Git, branches e merges." > README.md
+git add README.md
+git commit -m "feat editar README na feature-edicao-readme"
+
+# Voltar para main e alterar o mesmo arquivo para gerar conflito
+git checkout main
+echo "# Projeto Git Exame
+**Nome:** Bacar Silla
+**Data:** 12/02/2026
+**Descrição do projeto:** Projeto prático de Git para exame final." > Parte3_Conflito/README.md
+git add Parte3_Conflito/README.md
+git commit -m "feat editar README na main"
+
+# Tentar merge (vai gerar conflito)
+git merge feature-edicao-readme || echo "Conflito detectado – resolvendo..."
+
+# Resolver conflito manualmente
+echo "# Projeto Git Exame
+**Nome:** Bacar Silla
+**Data:** 12/02/2026
+**Descrição do projeto:** Exercício prático de Git envolvendo README, log.txt e merges." > Parte3_Conflito/README.md
+git add Parte3_Conflito/README.md
+git commit -m "fix resolver conflito no README"
+
+cd ..
